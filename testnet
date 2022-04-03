@@ -1,0 +1,36 @@
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+int sumSequence(void)
+{
+	int accumulator = 0;
+	for (;;) {
+		int value = 0;
+		cout << "Enter next number: ";
+		cin >> value;
+
+		if (value < 0) {
+			break;
+		}
+
+		accumulator = accumulator + value;
+	}
+	return accumulator;
+}
+
+int main(int argc, char* pszArgs[]) {
+	int accumulatedValue;
+	for (;;) {
+		cout << "\nEnter next sequnce\n";
+		accumulatedValue = sumSequence();
+
+		if (accumulatedValue == 0) { break; }
+
+		cout << "\nTotal Value is: " << accumulatedValue << "\n";
+		system("PAUSE");
+		return 0;
+	}
+}
